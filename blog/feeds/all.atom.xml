@@ -201,6 +201,126 @@ ctx.strokeStyle = "blue"
 # 實際執行畫線
 ctx.stroke()
 ctx.closePath()
+&lt;/script&gt;
+
+&lt;!-- 迴圈練習 --&gt;
+
+&lt;canvas id="japanflag2" width="600" height="250"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+import math
+canvas = doc["japanflag2"]
+ctx = canvas.getContext("2d")
+
+ #垂直
+for i in range(6):
+    ctx.beginPath()
+    ctx.lineWidth = 1
+    ctx.moveTo(100+i*20,50)
+    ctx.lineTo(100+i*20,150)
+    ctx.strokeStyle = "blue"
+    ctx.stroke()
+    ctx.closePath()
+#水平
+for i in range(5):
+    ctx.beginPath()
+    if i == 0:
+        ctx.lineWidth = 7
+    else:
+        ctx.lineWidth = 1
+    ctx.moveTo(99,50+i*25)
+    ctx.lineTo(201,50+i*25)
+    ctx.strokeStyle = "blue"
+    ctx.stroke()
+    ctx.closePath()
+&lt;/script&gt;
+
+&lt;!-- A Major --&gt;
+
+&lt;canvas id="japanflag3" width="600" height="250"&gt;&lt;/canvas&gt;
+
+&lt;script type="text/python3"&gt;
+from browser import document as doc
+import math
+canvas = doc["japanflag3"]
+ctx = canvas.getContext("2d")
+
+ #垂直
+for i in range(6):
+    ctx.beginPath()
+    ctx.lineWidth = 1
+    ctx.moveTo(100+i*20,50)
+    ctx.lineTo(100+i*20,150)
+    ctx.strokeStyle = "blue"
+    ctx.stroke()
+    ctx.closePath()
+#水平
+for i in range(5):
+    ctx.beginPath()
+    if i == 0:
+        ctx.lineWidth = 7
+    else:
+        ctx.lineWidth = 1
+    ctx.moveTo(99,50+i*25)
+    ctx.lineTo(201,50+i*25)
+    ctx.strokeStyle = "blue"
+    ctx.stroke()
+    ctx.closePath()
+
+#A Major 
+ctx.beginPath()
+ctx.fillStyle = 'black'
+ctx.strokeStyle = "black"
+ctx.font = "25px Arial"
+ctx.fillText("A Major", 110, 25)
+ctx.fill()
+ctx.stroke()
+ctx.closePath()
+
+# 1.2.3
+ctx.beginPath()
+ctx.fillStyle = 'black'
+ctx.strokeStyle = "black"
+for i in range(3):
+    ctx.arc(140+i*20, 87.5, 7, 0, 2*math.pi, False)
+ctx.fill()
+ctx.stroke()
+ctx.closePath()
+ctx.beginPath()
+ctx.fillStyle = 'white'
+ctx.font = "16px Arial"
+ctx.fillText("1", 135, 92.5)
+ctx.fillText("2", 155, 92.5)
+ctx.fillText("3", 175, 92.5)
+ctx.fill()
+ctx.stroke()
+ctx.closePath()
+
+# o
+ctx.beginPath()
+ctx.arc(120, 40, 5, 0, 2*math.pi, False)
+ctx.lineWidth =3
+ctx.strokeStyle = "black"
+ctx.stroke()
+ctx.closePath()
+ctx.beginPath()
+ctx.arc(200, 40, 5, 0, 2*math.pi, False)
+ctx.lineWidth =3
+ctx.strokeStyle = "black"
+ctx.stroke()
+ctx.closePath()
+# x
+ctx.beginPath()
+#ctx.arc(100, 40, 5, 0, 2*math.pi, False)
+ctx.moveTo(95, 35)
+ctx.lineTo(105, 45)
+ctx.moveTo(105, 35)
+ctx.lineTo(95, 45)
+ctx.lineWidth =3
+ctx.strokeStyle = "black"
+ctx.stroke()
+ctx.closePath()
 &lt;/script&gt;</summary><category term="Brython"></category></entry><entry><title>2016Fall 程式練習題-1234</title><link href="./2016fall-cheng-shi-lian-xi-ti-1234.html" rel="alternate"></link><published>2016-10-24T12:00:00+08:00</published><updated>2016-10-24T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-10-24:./2016fall-cheng-shi-lian-xi-ti-1234.html</id><summary type="html">&lt;p&gt;1234已知截至第六週 2016fallcpa 的分組資料位於倉儲中的 &lt;a href="./../w6_group.txt"&gt;w6_group.txt&lt;/a&gt;, 而從學校修課系統下載的修課人員名條則為 &lt;a href="./../w6_list.txt"&gt;w6_list.txt&lt;/a&gt;, 請各組著手練習, 找出尚未納入分組的人員名單, 並研擬如何處置上課一個半月卻尚未進入情況的學員?&lt;/p&gt;
 
 
