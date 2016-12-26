@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>W16 練習 - 2016Fall CPB 課程網誌 (虎尾科大MDE)</title>
+    <title>2016Fall 程式練習題-1234 - 2016Fall CPB 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,21 +166,21 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./w16-lian-xi.html">
+<link rel="canonical" href="./2016fall-cheng-shi-lian-xi-ti-1234.html">
 
-        <meta name="author" content="40523238" />
-        <meta name="keywords" content="Brython" />
-        <meta name="description" content="w16" />
+        <meta name="author" content="yen" />
+        <meta name="keywords" content="使用導引" />
+        <meta name="description" content="1234已知截至第六週 2016fallcpa 的分組資料位於倉儲中的 w6_group.txt, 而從學校修課系統下載的修課人員名條則為 w6_list.txt, 請各組著手練習, 找出尚未納入分組的人員名單, 並研擬如何處置上課一個半月卻尚未進入情況的學員?" />
 
         <meta property="og:site_name" content="2016Fall CPB 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="W16 練習"/>
-        <meta property="og:url" content="./w16-lian-xi.html"/>
-        <meta property="og:description" content="w16"/>
-        <meta property="article:published_time" content="2016-12-26" />
-            <meta property="article:section" content="Course" />
-            <meta property="article:tag" content="Brython" />
-            <meta property="article:author" content="40523238" />
+        <meta property="og:title" content="2016Fall 程式練習題-1234"/>
+        <meta property="og:url" content="./2016fall-cheng-shi-lian-xi-ti-1234.html"/>
+        <meta property="og:description" content="1234已知截至第六週 2016fallcpa 的分組資料位於倉儲中的 w6_group.txt, 而從學校修課系統下載的修課人員名條則為 w6_list.txt, 請各組著手練習, 找出尚未納入分組的人員名單, 並研擬如何處置上課一個半月卻尚未進入情況的學員?"/>
+        <meta property="article:published_time" content="2016-10-24" />
+            <meta property="article:section" content="Misc" />
+            <meta property="article:tag" content="使用導引" />
+            <meta property="article:author" content="yen" />
 
 
     <!-- Bootstrap -->
@@ -261,10 +261,10 @@ init_mathjax();
                          <li><a href="./pages/about/">
                              About
                           </a></li>
-                        <li class="active">
+                        <li >
                             <a href="./category/course.html">Course</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="./category/misc.html">Misc</a>
                         </li>
             </ul>
@@ -290,10 +290,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./w16-lian-xi.html"
+                    <a href="./2016fall-cheng-shi-lian-xi-ti-1234.html"
                        rel="bookmark"
-                       title="Permalink to W16 練習">
-                        W16 練習
+                       title="Permalink to 2016Fall 程式練習題-1234">
+                        2016Fall 程式練習題-1234
                     </a>
                 </h1>
             </header>
@@ -303,21 +303,23 @@ init_mathjax();
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-12-26T14:01:00+08:00"> 週一 26 十二月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-10-24T12:00:00+08:00"> 週一 24 十月 2016</time>
     </span>
             <span class="label label-default">By</span>
-            <a href="./author/40523238.html"><i class="fa fa-user"></i> 40523238</a>
+            <a href="./author/yen.html"><i class="fa fa-user"></i> yen</a>
 
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/brython.html">Brython</a>
+	<a href="./tag/shi-yong-dao-yin.html">使用導引</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>w16</p>
+                <p>1234已知截至第六週 2016fallcpa 的分組資料位於倉儲中的 <a href="./../w6_group.txt">w6_group.txt</a>, 而從學校修課系統下載的修課人員名條則為 <a href="./../w6_list.txt">w6_list.txt</a>, 請各組著手練習, 找出尚未納入分組的人員名單, 並研擬如何處置上課一個半月卻尚未進入情況的學員?</p>
 
 
+<p>以下利用 Brython 讀取位於倉儲中的 <a href="./../w6_list.txt">w6_list.txt</a> 與 <a href="./../w6_group.txt">w6_group.txt</a> 資料檔案.</p>
+<p>表示學校教務系統中, 修 2016fallcpa 的學員名單為:</p>
 <!-- 導入 Brython 標準程式庫 -->
 
 <script type="text/javascript" 
@@ -332,27 +334,67 @@ brython(1);
 }
 </script>
 
-<!-- 以下實際利用  Brython 畫一條直線 -->
+<!-- 以下利用 Brython 程式執行檔案讀取與比對流程 -->
 
-<div id="con"></div>
+<!-- 假如需要用圖型表示數字, 則利用 canvas 繪圖 -->
+
+<!-- <canvas id="plotarea" width="600" height="400"></canvas> -->
+
+<div id="container"></div>
+
+<script type="text/python3" id="script1">
+from browser import document, html
+container = document['container']
+data = open("./../w6_list.txt").read()
+container <= data
+</script>
+
+<p><br />
+<br /></p>
+<p>而截至 w6, 納入分組名單中的學員有:</p>
+<div id="container2"></div>
 
 <script type="text/python3">
-from browser import alert
-from browser import document
-from browser import html
-#print("test")
-#alert("test")
-con1=document["con"]
-try:
-    for i in range(1):
-         #con1 <="test"+"<br/>"
-         youInput=int(input("請輸入一個整數!"))
-         con1<="test"+html.BR()
-         output =youInput+1
-         con1<="你輸入的整數加上1之後，為"+str(output)
-except:
-    con1<="拜託請輸入整數!"
+from browser import document, html
+container2 = document['container2']
+data2 = open("./../w6_group.txt").read()
+container2 <= data2
+</script>
 
+<p><br />
+<br /></p>
+<p>現在, 誰能夠幫我們找出至今尚未納入分組名單中的學員, 共有那些人？</p>
+<div id="container3"></div>
+
+<script type="text/python3">
+from browser import document, html
+# 從 id=script1 程式區段取 data 變數
+from script1 import data
+container3 = document['container3']
+data3 = open("./../w6_group.txt").read()
+group = data3.splitlines()
+# 希望將分組資料轉為學員數列, 令為變數名稱 result_g
+result_g = []
+# 已經註冊者數列設為 registered
+registered = []
+for line in group:
+    # 去除每一行最後的空白成員
+    sline = line.split(",")
+    # 再將各組拆成個別組員後, 串成 result_g
+    for m in sline:
+        result_g.append(m)
+    #container3 <= len(sline)
+    #container3 <= html.BR()
+#container3 <= len(result_g)
+registered = data.splitlines()[:-1]
+# 設法找出至今尚未分組的學員學號
+not_in_group = [c for c in registered if c not in result_g]
+#container3 <= len(registered) -len(result_g)
+n = 1
+for i in not_in_group:
+    container3 <= "第"+str(n)+"位: "+ str(i)
+    n = n + 1
+    container3 <= html.BR()
 </script>
             </div>
             <!-- /.entry-content -->
