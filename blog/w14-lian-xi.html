@@ -169,17 +169,17 @@ init_mathjax();
 <link rel="canonical" href="./w14-lian-xi.html">
 
         <meta name="author" content="40523238" />
-        <meta name="keywords" content="每周練習" />
-        <meta name="description" content="以下為第十四週開始的程式練習，要利用中來練習Brython 的用法" />
+        <meta name="keywords" content="Brython" />
+        <meta name="description" content="w16" />
 
         <meta property="og:site_name" content="2016Fall CPB 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="W14 練習"/>
         <meta property="og:url" content="./w14-lian-xi.html"/>
-        <meta property="og:description" content="以下為第十四週開始的程式練習，要利用中來練習Brython 的用法"/>
-        <meta property="article:published_time" content="2016-12-12" />
+        <meta property="og:description" content="w16"/>
+        <meta property="article:published_time" content="2016-12-26" />
             <meta property="article:section" content="Course" />
-            <meta property="article:tag" content="每周練習" />
+            <meta property="article:tag" content="Brython" />
             <meta property="article:author" content="40523238" />
 
 
@@ -303,7 +303,7 @@ init_mathjax();
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-12-12T14:36:00+08:00"> 週一 12 十二月 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-12-26T14:01:00+08:00"> 週一 26 十二月 2016</time>
     </span>
             <span class="label label-default">By</span>
             <a href="./author/40523238.html"><i class="fa fa-user"></i> 40523238</a>
@@ -311,11 +311,14 @@ init_mathjax();
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/mei-zhou-lian-xi.html">每周練習</a>
-    
+	<a href="./tag/brython.html">Brython</a>
+    <span class="label label-default">Lang</span>
+	<a href="./w14-lian-xi.html">en</a>
+	<a href="./w14-lian-xi.html">en</a>
+
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>以下為第十四週開始的程式練習，要利用<a href="http://mde.tw/2016fallcp/course/Python3Programs.txt">中來練習Brython 的用法</p>
+                <p>w16</p>
 
 
 <!-- 導入 Brython 標準程式庫 -->
@@ -332,15 +335,27 @@ brython(1);
 }
 </script>
 
-<!-- 以下實際利用  Brython 畫圖 -->
+<!-- 以下實際利用  Brython 畫一條直線 -->
 
-<div id="ex1" ></div>
+<div id="con"></div>
 
 <script type="text/python3">
-from browser import document as doc
-container = ['ex1']
+from browser import alert
+from browser import document
+from browser import html
+#print("test")
+#alert("test")
+con1=document["con"]
+try:
+    for i in range(1):
+         #con1 <="test"+"<br/>"
+         youInput=int(input("請輸入一個整數!"))
+         con1<="test"+html.BR()
+         output =youInput+1
+         con1<="你輸入的整數加上1之後，為"+str(output)
+except:
+    con1<="拜託請輸入整數!"
 
-container <= ['W14 練習 ']
 </script>
             </div>
             <!-- /.entry-content -->
@@ -362,6 +377,16 @@ container <= ['W14 練習 ']
                         </a>
                     </li>
                     <li class="list-group-item">
+                        <a href="./w14-lian-xi.html">
+                            W14 練習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="./w14-lian-xi.html">
+                            W14 練習
+                        </a>
+                    </li>
+                    <li class="list-group-item">
                         <a href="./ji-suan-ji-cheng-shi-w13.html">
                             計算機程式 W13
                         </a>
@@ -369,16 +394,6 @@ container <= ['W14 練習 ']
                     <li class="list-group-item">
                         <a href="./w12-brython-hui-tu-fan-li.html">
                             w12 Brython 繪圖範例
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./w11-brython-hui-tu-fan-li.html">
-                            w11 Brython 繪圖範例
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="./w10-brython-hui-tu-fan-li.html">
-                            w10 Brython 繪圖範例
                         </a>
                     </li>
                 </ul>
