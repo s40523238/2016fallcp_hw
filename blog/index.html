@@ -283,6 +283,18 @@ init_mathjax();
             <article>
                 <h2><a href="./2016fallcp-qi-mo-kao-zhou.html">2016fallcp 期末考週</a></h2>
                 <div class="summary"><p>W17 週心得與程式範例:</p>
+<p>W16 週心得與程式範例:</p>
+<p><p>2017 年元旦快樂</p></p>
+<p>首先了解 random 亂數模組的用法</p>
+
+<p>然後利用 random 模組產生一個介於 1-100 的整數, 列印在網頁上.</p>
+
+<!-- 導入 Brython 標準程式庫 -->
+
+<script type="text/javascript" 
+    src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js">
+</script>
+
 <!-- 啟動 Brython -->
 
 <script>
@@ -293,24 +305,15 @@ brython(1);
 
 <!-- 以下可以執行  Brython 程式 -->
 
-<canvas id="onebar" width="400" height="400"></canvas>
+<div id="newyear"></div>
 
 <script type="text/python3">
 from browser import document
-from browser import window
-from browser import timer
-import math
-canvas = document["onebar"]
-ctx = canvas.getContext("2d")
+from browser import html
+import random
+print_location = document["newyear"]
 
-# 取畫布的寬與高度
-width = canvas.width
-height = canvas.height
-
-# 畫圓函式
-def circle(x,y,r):
-    ctx.beginPath()
-    ctx.arc(x, y, r, 0, math ...</script></!--></!-->
+def ...</script></!--></!--></!-->
                     <a class="btn btn-default btn-xs" href="./2016fallcp-qi-mo-kao-zhou.html">more ...</a>
                 </div>
             </article>

@@ -170,13 +170,13 @@ init_mathjax();
 
         <meta name="author" content="40523238" />
         <meta name="keywords" content="Brython" />
-        <meta name="description" content="W17 週心得與程式範例: window.onload=function(){ brython(1); } from browser import document from browser import window from browser import timer import math canvas = document[&#34;onebar&#34;] ctx = canvas.getContext(&#34;2d&#34;) # 取畫布的寬與高度 width = canvas.width height = canvas.height # 畫圓函式 def circle(x,y,r): ctx.beginPath() ctx.arc(x, y, r, 0, math ..." />
+        <meta name="description" content="W17 週心得與程式範例: W16 週心得與程式範例: 2017 年元旦快樂 首先了解 random 亂數模組的用法 然後利用 random 模組產生一個介於 1-100 的整數, 列印在網頁上. window.onload=function(){ brython(1); } from browser import document from browser import html import random print_location = document[&#34;newyear&#34;] def ..." />
 
         <meta property="og:site_name" content="2016Fall CPB 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="2016fallcp 期末考週"/>
         <meta property="og:url" content="./2016fallcp-qi-mo-kao-zhou.html"/>
-        <meta property="og:description" content="W17 週心得與程式範例: window.onload=function(){ brython(1); } from browser import document from browser import window from browser import timer import math canvas = document[&#34;onebar&#34;] ctx = canvas.getContext(&#34;2d&#34;) # 取畫布的寬與高度 width = canvas.width height = canvas.height # 畫圓函式 def circle(x,y,r): ctx.beginPath() ctx.arc(x, y, r, 0, math ..."/>
+        <meta property="og:description" content="W17 週心得與程式範例: W16 週心得與程式範例: 2017 年元旦快樂 首先了解 random 亂數模組的用法 然後利用 random 模組產生一個介於 1-100 的整數, 列印在網頁上. window.onload=function(){ brython(1); } from browser import document from browser import html import random print_location = document[&#34;newyear&#34;] def ..."/>
         <meta property="article:published_time" content="2017-01-09" />
             <meta property="article:section" content="Course" />
             <meta property="article:tag" content="Brython" />
@@ -316,82 +316,6 @@ init_mathjax();
 </footer><!-- /.post-info -->                    </div>
                 </div>
                 <p>W17 週心得與程式範例:</p>
-<!-- 啟動 Brython -->
-
-<script>
-window.onload=function(){
-brython(1);
-}
-</script>
-
-<!-- 以下可以執行  Brython 程式 -->
-
-<canvas id="onebar" width="400" height="400"></canvas>
-
-<script type="text/python3">
-from browser import document
-from browser import window
-from browser import timer
-import math
-canvas = document["onebar"]
-ctx = canvas.getContext("2d")
-
-# 取畫布的寬與高度
-width = canvas.width
-height = canvas.height
-
-# 畫圓函式
-def circle(x,y,r):
-    ctx.beginPath()
-    ctx.arc(x, y, r, 0, math.pi*2, True)
-    ctx.fill()
-    ctx.closePath()
-
-def line(x1, y1, x2, y2):
-    # 以下可以利用 ctx 物件進行畫圖
-    # 先畫一條直線
-    ctx.beginPath()
-    # 設定線的寬度為 1 個單位
-    ctx.lineWidth = 1
-    # 將畫筆移動到 (x1, y1) 座標點
-    ctx.moveTo(x1, y1)
-    # 然後畫直線到 (x2, y2) 座標點
-    ctx.lineTo(x2, y2)
-    # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
-    ctx.strokeStyle = "blue"
-    # 實際執行畫線
-    ctx.stroke()
-    ctx.closePath()
-
-line(200, 200, 200, 300)
-circle(200, 200, 5)
-
-x1 = 200
-y1 = 200
-r = 100
-deg = math.pi/180
-
-theta = 0
-
-# 每隔特定時間, 進行動畫繪製
-def animate():
-    global theta
-    # 刷新畫布
-    ctx.clearRect(0, 0, width, height)
-    # 逐一重新繪製直線與圓心球
-    x2 = x1 +  r*math.cos(theta*deg)
-    y2 = y1 +  r*math.sin(theta*deg)
-    line(x1, y1, x2, y2)
-    # 再加一條小線段
-    x3 = x2 + 50*math.cos(10*theta*deg)
-    y3 = y2 + 50*math.sin(10*theta*deg)
-    line(x2, y2, x3, y3)
-    circle(x1, y1, 5)
-    theta += 1
-
-timer.set_interval(animate, 50)
-</script>
-
 <p>W16 週心得與程式範例:</p>
 <p><p>2017 年元旦快樂</p></p>
 <p>首先了解 random 亂數模組的用法</p>
